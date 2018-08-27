@@ -45,7 +45,7 @@ client.on('message', async msg => {
 					let index = 0;
 					msg.channel.send(`
 __**Liste des musiques possibles**__ :
-`${videos.map(video2 => `**${++index} )** ${video2.title}`).join('\n')}`
+${videos.map(video2 => `**${++index} )** ${video2.title}`).join('\n')}
 
 Veuillez entrer un chiffre entre 1 et 10, pour sélectionner l'un des résultats.
 :warning: Vous avez très peu de temps pour choisir, alors dépêchez-vous !
@@ -96,7 +96,7 @@ Veuillez entrer un chiffre entre 1 et 10, pour sélectionner l'un des résultats
 		if (!serverQueue) return msg.channel.send(':confused: Il n\'y a aucune musique en cours.');
 		return msg.channel.send(`
 __**File d'attente des musiques**__ :
-`${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}`
+${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
 
 **Lecture en cours:** ${serverQueue.songs[0].title}
 		`);
